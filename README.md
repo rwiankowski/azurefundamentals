@@ -1,0 +1,2 @@
+# azurefundamentals
+Azure Fundamentals Training
