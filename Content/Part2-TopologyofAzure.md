@@ -1,10 +1,11 @@
 # Part 2 - Topology of Azure
 
-    - What is Azure
-    - Buying Azure
-    - How is Azure structured
-    - Naming and Tagging
-    - Azure RBAC
+Topics:
+- What is Azure
+- Buying Azure
+- How is Azure structured
+- Naming and Tagging
+- Azure RBAC
 
 ## What is Azure
 
@@ -167,3 +168,5 @@ In simpler words, we define who, what, and where.
 - Security Principal - An object representing an entity requesting access to resources. 
 - Role Definition - A collection of permissions that lists the operations that can be performed.
 - Assignment - attaching a role definition at a selected scope. 
+
+[Back to README](../README.md)

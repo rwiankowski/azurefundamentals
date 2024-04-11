@@ -17,13 +17,14 @@
     - Azure RBAC
 
 - [Part 3 - Identities](Content/Part3-Identities.md)
+    - Azure and Entra ID
     - What is Entra ID
     - Entra ID Security Principals
     - Multi-Domain Setup
     - Entra ID RBAC
     - Entra ID Security
 
-- Part 4 - Fundamental Resources
+- Part 4 - Fundamental Resources - based on Az-900 slides
     - Networking
     - Compute (incl AVD)
     - Storage

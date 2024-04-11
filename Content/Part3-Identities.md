@@ -1,5 +1,15 @@
 # Part 3 - Identities
 
+Topics:
+- Azure and Entra ID
+- What is Entra ID
+- Entra ID Security Principals
+- Multi-Domain Setup
+- Entra ID RBAC
+- Entra ID Security
+
+## Azure and Entra ID
+
 Historically, when we got to the part where we talk about identities in Azure, I would say:
 
 >Azure starts with Azure Active Directory (which we often call AzureAD or use the acronym AAD). The name of the service is, however, misleading. While we cannot use Azure without Azure AD, it is not a part of Azure, and many customers use it without ever thinking of deploying any Azure Resources. Azure Active Directory is also the backbone of other cloud-based services offered by Microsoft, like Microsoft 365 and Dynamics 365. 
@@ -220,3 +230,5 @@ The MFA service provided by Azure Active Directory supports the following forms 
 - Voice call
 
 Multi-factor authentication is a relatively simple yet potent protection mechanism. A common saying reminds us that "identity is the new perimeter", and enforcing MFA is the best thing we can do to help secure users in your organisation.
+
+[Back to README](../README.md)
