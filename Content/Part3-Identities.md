@@ -61,7 +61,7 @@ The built-in domain name will always be there with you, but you can also add a c
 
 ### Entra ID vs. AD
 
-![Entra ID at a Gance](Images/entraAtAGlance.png)
+![Entra ID at a Gance](images/entraAtAGlance.png)
 
 Active Directory, also known as Active Directory Domain Services (AD DS) or Windows Server Active Directory (WS AD), is a service provided as part of the Windows Server operating system. It acts as a data store for users and devices on a local network and provides authentication and authentication mechanisms. While that description could also fit Azure Active Directory (and there is this naming similarity), it is a fundamentally different service. The key differences are shown in the following table:
 
@@ -129,7 +129,7 @@ I excluded from the list above a sandbox tenant you might use individually or in
 
 ### Entra ID Business-to-Business Collaboration
 
-![Entra ID B2B Collaboration Overview](Images/b2bCollaborationOverview.png)
+![Entra ID B2B Collaboration Overview](images/b2bCollaborationOverview.png)
 
 When you end up having multiple tenants, you could keep them completely isolated and create duplicate user accounts (and potentially groups) in every one of them, but that would be impractical. Also, you would eventually face configuration drift and potentially expose security vulnerabilities.
 
@@ -188,7 +188,7 @@ Apart from those three, I highly recommend that you check out GlobalReader, Grou
 
 The Global Administrator role is another one of the few places Entra ID and Azure come together. If you have this Entra ID role, you can navigate to the Properties section of the Entra ID blade in the Azure Portal and use the option "Access management for Azure resources". Doing this will give you the User Access Administrator RBAC role in Azure RBAC (on the entire hierarchy). With that, you could create an assignment giving yourself the Owner permissions on any part of the Azure landscape.
 
-![Access management for Azure resources](Images/accessManagement.png)
+![Access management for Azure resources](images/accessManagement.png)
 
 **Therefore, the Global Administrator role gives you unrestricted access to Entra ID and effectively to the entire Azure hierarchy within the tenant.** 
 
@@ -198,7 +198,7 @@ Finally, we will dive into some security features Entra ID offers. We won't cove
 
 ### Conditional Access
 
-![Entra ID Conditional Access](Images/azureAdConditionalAccess.png)
+![Entra ID Conditional Access](images/azureAdConditionalAccess.png)
 
 One of the fundamental security features of Azure Active Directory is Conditional Access. The feature analyses various signals to automate decisions and enforce organisational access policies.
 

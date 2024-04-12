@@ -99,13 +99,13 @@ Some Azure services are zone-redundant by default; some can be configured to spa
 
 *IMPORTANT - The configuration of zone redundancy will be an essential aspect of your architectural considerations and a fundamental component of highly available applications.*
 
-![Availability Zones](Images/availability-zones.png)
+![Availability Zones](images/availability-zones.png)
 
 #### Final picture
 
 By consciously designing our topology to use Geographies, Regions, and Availability Zones, we can achieve very high levels of resiliency. With a zone-redundant topology in the primary region and presence in a paired location, we can protect our application(s) from various outages. But bear in mind that such solutions come at a cost - not only resource price but also the cost of significantly increased complexity.
 
-![Regions and Availability Zones Combined](Images/availability-zones-region-geography.png)
+![Regions and Availability Zones Combined](images/availability-zones-region-geography.png)
 
 ### The Logical Structure
 
@@ -118,7 +118,7 @@ In the management hierarchy of Azure, we have five primary levels:
 - Resource Group – The non-optional logical container for Azure Resources. Resource groups should bring together resources that share the same lifecycle. 
 - Resource - the service or component that we want to use. Every resource must be deployed to a specific Azure Region and a Resource Group. Every resource must be deployed to a particular Azure Region and a Resource Group.
 
-![Management Hierarchy](Images/managementiHierachy.png)
+![Management Hierarchy](images/managementiHierachy.png)
 
 Management Groups, Subscriptions, and Resource Groups all allow for the following:
 - granting RBAC permissions (access rights flow down the hierarchy in a waterfall way)
@@ -127,7 +127,7 @@ Management Groups, Subscriptions, and Resource Groups all allow for the followin
 
 *IMPORTANT - Management Groups are not enabled by default, so you must opt-in to get this functionality. When you enable Management Groups, the platform will create the Tenant Root Group for you. The ID of this group cannot be changed and is always the same as the ID of your Entra ID tenant (I will explain that very soon).*
 
-![Management Group Levels](Images/managementGroups.png)
+![Management Group Levels](images/managementGroups.png)
 
 
 ## Naming and Tagging
