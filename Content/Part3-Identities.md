@@ -142,9 +142,13 @@ This service also works great when you want to give users from partner organisat
 
 In the example above, I talk about one Entra ID tenant inviting users from another ADD as guest users, but there are other options. You can also invite Microsoft, Google, Facebook (though with limitations) and other accounts. However, those scenarios are rare, and in many cases, they are not good practice. If you use someone's work or school account, you can be reasonably confident that that account will be disabled or removed when they leave the organisation. On the other hand, inviting someone using their personal Microsoft account will place that responsibility on you. 
 
-### Entra ID Busines to Customer
+###  Microsoft Entra External ID
 
-Azure also offers a Business-to-customer service (Entra ID B2C), but the name can be misleading. You might expect similar behaviour after learning about B2B, but that is untrue. To use Entra ID B2C, you create a new, particular type of Entra ID tenant. That tenant is used solely to manage end-customer identities and their access to your applications. 
+Azure also offers a business-to-customer service used to manage end-customer identities and their access to your applications. 
+
+When using Extrenal Entra ID, we create a seprate, use case-specific directory which can authenticate and authorise end users. 
+
+*There is also a older version of this service called Azure AD B2C - Business to Customer.*
 
 ## Entra ID RBAC
 
@@ -181,7 +185,7 @@ Because Entra ID is used for all cloud-based services offered by Microsoft, not 
 
 Apart from those three, I highly recommend that you check out GlobalReader, Groups Administrator, Application Administrator, and Security Administrator in the [official docs from Microsoft](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference)
 
-*IMPORTANT - Global Administrator is the highest permission level in Entra ID. The role allows you to do anything - the equivalent of root.
+*IMPORTANT - Global Administrator is the highest permission level in Entra ID. The role allows you to do anything - the equivalent of root.*
  
 
 ### Where Entra ID RBAC meets Azure RBAC

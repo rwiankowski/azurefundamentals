@@ -24,9 +24,9 @@
     - Entra ID RBAC
     - Entra ID Security
 
-- Part 4 - Fundamental Resources - based on Az-900 slides
-    - Networking
+- [Part 4 - Fundamental Resources](Content/Part4-Resources.md)
     - Compute (incl AVD)
+    - Networking
     - Storage
 
 
@@ -60,4 +60,4 @@ Throughout the course, I will provide exam tips highlighting common exam questio
 
 Throughout this training, I used visual aids created myself, but wherever possible, I also employed images and graphics from the Microsoft official documentation at https://learn.microsoft.com.
 
-Last but not least, the format is not only inspired but copied from [David Beazley's Practical Python](https://dabeaz-course.github.io/practical-python/) traning. I recently had the pleasure of joining a Python training based on David's content, and I fell in love with the format. 
+Last but not least, the format is not only inspired but copied from [David Beazley's Practical Python](https://dabeaz-course.github.io/practical-python/) traning. A while ago, I had the pleasure of joining a Python training based on David's content, and I fell in love with the format. 

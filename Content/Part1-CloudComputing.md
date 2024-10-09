@@ -54,6 +54,12 @@ storage, processing, bandwidth, and active user accounts). Resource usage can be
 monitored, controlled, and reported, providing transparency for both the provider and 
 consumer of the utilized service.
 
+However, if you're planning on taking the AZ-900 certification, please also keep in mind how Microsoft choses to phrase i;
+
+> Cloud computing is the delivery of computing services over the internet, enabling faster innovation, flexible resources, and economies of scale.
+
+Following this definition, they also identify three types of services - compute, networking and storage.
+
 ## Cloud Computing Service Models
 
 ![Cloud Computing Models](images/cloudComputingModels.png)
@@ -71,7 +77,7 @@ As the popularity of cloud computing exploded in recent years, various vendors c
 - Integration Platform as a Service,
 - and others.
 
-However, all those constructs can be separated into IaaS, PaaS, and SaaS.
+However, all those constructs can be brought back to IaaS, PaaS, and SaaS.
 
 *IMPORTANT - While Microsoft has offerings covering all three models in its portfolio, Azure is limited to IaaS and PaaS only. There are no SaaS services in Azure.*
 
@@ -121,7 +127,7 @@ This adaptation can mean a lot of things, including but not limited to:
 - Reacting to peaks in user traffic by adding resources to popular applications
 - Decommissioning unused systems
 
-When using the cloud, all those tasks can be executed significantly faster compared to traditional environments, and as a result, our time to value is shorter.
+When using the cloud, all those tasks can be executed significantly faster compared to traditional environments, and as a result, our time to value (or saving) is shorter.
 
 Finally, moving to the cloud shifts an IT organisation from capital expenses (Capex) such as data centres, server hardware, and software licenses, which must be depreciated over several years of usage, to Opex - operational expenses, which can be tax deductible monthly. For many enterprises, this shift in financial management is incentive enough to invest in a move to the cloud.
 

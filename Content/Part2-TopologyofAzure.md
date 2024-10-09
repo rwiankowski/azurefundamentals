@@ -17,7 +17,7 @@ According to Microsoft:
 
 But in plain English, Azure is the public cloud offering from Microsoft that provides a wide range of IaaS (Infrastructure-as-a-Service) and PaaS (Platform-as-a-Service) services, which allow you to run almost any application or workload. 
 
-I am unaware of any SaaS (Software-as-a-Service) offering that would be a part of Azure, but that statement might not age well, so feel free to reach out if you'd like to correct me on that. Before you do so, I want to acknowledge that Azure Active Directory is a SaaS offering. However, despite what the name indicates, it's not Azure. I will go deeper into that later, so please read on before sending me an angry message.
+I am unaware of any SaaS (Software-as-a-Service) offering that would be a part of Azure, but that statement might not age well, so feel free to reach out if you'd like to correct me on that. There are areas where the line starts to get blurry - for example, when considering services like the Fabric Capacity, but have arguments to defend my postition.
 
 ## Buying Azure
 
@@ -36,15 +36,13 @@ There are also specific programs and incentives for educational use. For example
 
 While we always buy the same Azure, no matter how we purchase, specific options and possibilities will vary based on the channel you use to purchase your Azure Subscriptions. For example, the workflow for creating new Subscriptions works differently - with EA, you can quickly deploy them using Infra-as-Code templates, but in CSP, that is not a feasible option.
 
-It's also important to mention that most of us use (probably without realising) the public version of Microsoft's public cloud called "Azure Cloud". Now you might wonder, if there is a public version of the public cloud, are two private ones as well? The answer to this question is - no, but there are three sovereign clouds with limited access:
+It's also important to mention that most of us use (probably without realising) the public version of Microsoft's public cloud called "Azure Cloud". Now you might wonder, if there is a public version of the public cloud, are two private ones as well? The answer to this question is - no, but there are two sovereign clouds with limited access:
 - Azure Government (US Gov and US DoD).
 - Azure China (served by 21Viatel under license from Microsoft).
 
-All three clouds are separate, with different management APIs and identity services used to grant access. A programmatic check will tell us the following:
+All three clouds, the public one and the two sovereign ones, are separate, with different management APIs and identity services used to grant access.
 
-
-*Fun fact - in the past, we also had Azure Germany (operated by T-Systems under license from Microsoft). In 2018, Microsoft stopped accepting_ new customers or adding new features to the German sovereign cloud. It was discontinued in late 2021. Today, the general Azure Cloud has two data centre regions in Germany.*
-
+*Fun fact - in the past, we also had Azure Germany (operated by T-Systems under license from Microsoft). In 2018, Microsoft stopped accepting new customers or adding new features to the German sovereign cloud. It was discontinued in late 2021. Today, the general Azure Cloud has two data centre regions in Germany.*
 
 ## How is Azure structured
 
@@ -74,17 +72,19 @@ The region(s) you choose to run your application(s) will have a significant impa
 - Prices can vary between regions located close to each other.
 - Regions have different capacity pools available, so scaling out could be impacted. 
 
+*IMPORTANT - At the time of the latest update to this page (October 2024) the most popular location in Europe - Azure West Europe is experiencing severe capacity constraints. While Microsoft is doing their best to expand their capacity across the continent, the situation is somewhat dynamic and you should always check the latest news when planning a large deployment.*
+
 #### Geographies
 
 While it might not be evident initially, all Regions are grouped into Geographies. Geography (often called Geo) represents a discrete market to preserve data residency and compliance boundaries.
 
 Most geographies have two regions designated as a Region Pair, but a few exceptions exist. In most cases, however, the two locations will be separated by hundreds of kilometers, thus allowing customers to configure Disaster Recovery and retain business continuity in a regional disaster.
 
-Also, please remember that certain regions are restricted from supporting specific customer scenarios, such as in-country disaster recovery. These regions are available only upon request, such as creating a new support request.
+Also, please remember that certain regions are restricted from supporting specific customer scenarios, such as in-country disaster recovery. These regions are available only upon request, such as creating a new support request. The Swedish and Norwegian geographies are prime examples.
 
-You can find detailed info on regional pairs [in the official Microsoft docs.](https://learn.microsoft.com/en-us/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies)
+You can find detailed info on regional pairs [in the official Microsoft docs.](https://learn.microsoft.com/en-us/azure/reliability/cross-region-replication-azure#azure-paired-regions)
 
-By design, at least one Region with a Geo will Support Availability Zones.
+By design, at least one Region within a Geo will Support Availability Zones.
 
 #### Availability Zones
 
@@ -112,7 +112,7 @@ By consciously designing our topology to use Geographies, Regions, and Availabil
 #### The Management Hierarchy
 
 In the management hierarchy of Azure, we have five primary levels:
-- Azure Active Directory – The non-optional authentication provider for Azure. This SaaS service is the root of every Azure deployment. It stores security principals like user accounts and groups and offers authentication and authorisation capabilities. We will dive deeper into Azure AD very soon. 
+- Microsoft Entra ID (formerly Azure Active Directory) – The non-optional authentication provider for Azure. This SaaS service is the root of every Azure deployment. It stores security principals like user accounts and groups and offers authentication and authorisation capabilities. We will dive deeper into Entra ID very soon. 
 - Management Group – The optional logical container helps us efficiently manage multiple subscriptions. We commonly use it to group subscriptions a given business unit uses, host a specific workload, or operate by a unique team.
 - Subscription – The primary unit of purchasing Azure.
 - Resource Group – The non-optional logical container for Azure Resources. Resource groups should bring together resources that share the same lifecycle. 
@@ -143,6 +143,8 @@ Therefore, I recommend you resist spending several weeks inventing the perfect n
 - Provides room and flexibility for exceptions,
 - Supports automation mechanisms (for example, by using consistent delimiters).
 
+*IMPORTANT - While I dicourtage over-thinking the naming convention, I do recommend giving it some thought. For many PaaS resources, the name will be included in the default public FQDN (Fully-Qualified Domain Name) of the instance, and will therefore have to be globally-unique (across ALL Azure customers).*
+
 ### Tagging
 
 Tags provide metadata for your Azure Resources. They are key-value pairs of your choice that allow for enriching resources with valuable information. This information organises your resources for billing, automation, or anything else you want to achieve. 
@@ -151,6 +153,8 @@ You can find yourself in a situation where a well-designed Management Hierarchy 
 - Scaling, both vertical (changing the SKU) and horizontal (starting/stopping instances), based on the demand or time/date,
 - Deploying updates in batches,
 - Configuring backup strategies. 
+
+*In cases where the Management Hierarchy is, at least, slightly chaotic, tags can also be very helpful for cost scoping.*
 
 ## Azure RBAC
 
@@ -165,7 +169,7 @@ Let's first describe how you implement RBAC, and then I'll explain what the diff
 In simpler words, we define who, what, and where.
 
 - Scope - a boundary for the level of access that is required.
-- Security Principal - An object representing an entity requesting access to resources. 
+- Security Principal - An object representing an entity requesting access to resources - a user, group or application (service account)
 - Role Definition - A collection of permissions that lists the operations that can be performed.
 - Assignment - attaching a role definition at a selected scope. 
 
