@@ -30,9 +30,9 @@
     - Storage
 
 
-- Part 5 - Managing Azure - based on Az-900 slides
-    - Cost Management
-    - Governance Mechanisms
+- [Part 5 - Managing Azure](Content/Part5-Management.md)
+    - Pricing and Cost Management
+    - Security and Compliancy
     - Deployment Tools
     - Monitoring Tools
 

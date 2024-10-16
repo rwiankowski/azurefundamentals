@@ -173,4 +173,4 @@ In simpler words, we define who, what, and where.
 - Role Definition - A collection of permissions that lists the operations that can be performed.
 - Assignment - attaching a role definition at a selected scope. 
 
-[Back to README](../README.md)
+[ < Previous](./Part1-CloudComputing.md) | [Home](../README.md) | [Next >](./Part3-Identities.md)

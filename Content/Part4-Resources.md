@@ -82,6 +82,8 @@ IP address allocation, switching, routing, DNS, and a default Internet breakout 
 
 *IMPORTANT - the default outbound Internet access for Azure VMs will be retired on Septerber 30th 2025. Please see the [official announcement](https://azure.microsoft.com/en-us/updates/default-outbound-access-for-vms-in-azure-will-be-retired-transition-to-a-new-method-of-internet-access/) for details.*
 
+The Virtual Network is a free resource which does not have a monthly cost associated with it, but data egressing from your Azure VNET will be billed. Ingress is free.
+
 ### VPN
 
 A private network in Azure will be instrumental. However, we can upgrade our environment even further by connecting our cloud VNET to the local on-premises network hosting other applications. The most common, battle-tested way of connecting to separate local networks is through an IPSEC VPN tunnel. 
@@ -159,3 +161,5 @@ If you would like to take the AZ-900 exam, you should also keep in mind two addi
 
 - Azure Migrate, which Microsoft describes as a unified migration platform. It offers a range of tools to aid in assessing and migrating applications to Azure. It provides both platform-native components and seamless integrations with third-party components.
 - Azure Data Box is a physical appliance used to migrate large volumes of data to Azure. It is a ruggedised appliance that connects to your local network and can be shipped back to Microsoft once you've copied the data onto it. It can also be used to migrate data out of the public cloud.
+
+[ < Previous](./Part3-Identities.md) | [Home](../README.md) | [Next >](./Part5-Management.md)

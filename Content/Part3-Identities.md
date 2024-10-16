@@ -235,4 +235,4 @@ The MFA service provided by Azure Active Directory supports the following forms 
 
 Multi-factor authentication is a relatively simple yet potent protection mechanism. A common saying reminds us that "identity is the new perimeter", and enforcing MFA is the best thing we can do to help secure users in your organisation.
 
-[Back to README](../README.md)
+[ < Previous](./Part2-TopologyofAzure.md) | [Home](../README.md) | [Next >](./Part4-Resources.md)
