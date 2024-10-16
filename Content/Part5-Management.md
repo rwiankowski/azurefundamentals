@@ -95,8 +95,6 @@ The list of supported functionalities includes the following:
 - Data Privacy and Risk Management to support data subject requests and risk assessments
 - Unified Data Governance to include data residing in AWS, GCP or on-premises
 
-
-
 ### Resource Locks
 
 Finally, we need to touch upon resource locks in Azure. Locks are a configuration change control mechanism that prevents resource deletion or modification. When a resource is locked, you cannot remove or modify it, depending on the type of lock you configured, until you remove it. It's a perfect way of preventing accidental changes, and I recommend seriously considering them for the production environments. Locks can be configured per resource or on the entire Resource Group to protect all child resources from deletion or modification.

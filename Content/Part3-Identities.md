@@ -42,7 +42,7 @@ Entra ID also offers a wide range of advanced security, collaboration, and other
 
 ### Entra ID Glossary
 
-Azure Active Directory introduces a fair bit of new terminology, and it is fundamental to understand what is what. We often use synonyms when referring to the same thing, so become familiar with the essential glossary below.
+Entra ID introduces a fair bit of new terminology, and it is fundamental to understand what is what. We often use synonyms when referring to the same thing, so become familiar with the essential glossary below.
 
 - **Tenant** - An essential word in our dictionary is the tenant. The tenant (often called a directory or domain) is a dedicated instance of Entra ID. Most commonly, it is intended for use by a specific organisation, but organisations can create additional tenants. As you probably remember from the previous chapter, all subscriptions belong to a single tenant - it is a tree-like structure. Therefore, creating several directories can make your governance very complex. One reasonable exception is separating end-user services like Microsoft 365 and infrastructure-focused Azure into different tenants. Due to the architecture of Entra ID (more on this very soon), such a setup can help with the separation of duties, especially when parts of IT are outsourced. A new ADD tenant was created for you when you signed up for the Azure Free account.
 - **Identity** - An Identity is an entity that can be authenticated, for example, a user or an application.
