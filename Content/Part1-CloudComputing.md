@@ -131,4 +131,4 @@ When using the cloud, all those tasks can be executed significantly faster compa
 
 Finally, moving to the cloud shifts an IT organisation from capital expenses (Capex) such as data centres, server hardware, and software licenses, which must be depreciated over several years of usage, to Opex - operational expenses, which can be tax deductible monthly. For many enterprises, this shift in financial management is incentive enough to invest in a move to the cloud.
 
-[ < Previous](../README.md) | [Home](../README.md) | [Next >](./Part2-TopologyofAzure.md)
+[ < Previous](./TableOfContents.md) | [Home](../README.md) | [Next >](./Part2-TopologyofAzure.md)

@@ -1,40 +1,8 @@
 # Azure Fundamentals Training
 
-## Topics
+Welcome to the Azure Practical Training! If this is your first time coming here, please familiarise yourself with the information below. If you're a returning user, or using this as part of an instructor-led course, feel free to jump directly to the: 
 
-- [Part 1 - What is Cloud Computing](Content/Part1-CloudComputing.md)
-    - Definition of Cloud Computing
-    - Cloud Computing Service Models
-    - The Shared Responsibility Model 
-    - Cloud Delivery Models
-    - Benefits of Using Cloud
-
-- [Part 2 - Topology of Azure](Content/Part2-TopologyofAzure.md)
-    - What is Azure
-    - Buying Azure
-    - How is Azure structured
-    - Naming and Tagging
-    - Azure RBAC
-
-- [Part 3 - Identities](Content/Part3-Identities.md)
-    - Azure and Entra ID
-    - What is Entra ID
-    - Entra ID Security Principals
-    - Multi-Domain Setup
-    - Entra ID RBAC
-    - Entra ID Security
-
-- [Part 4 - Fundamental Resources](Content/Part4-Resources.md)
-    - Compute (incl AVD)
-    - Networking
-    - Storage
-
-
-- [Part 5 - Managing Azure](Content/Part5-Management.md)
-    - Pricing and Cost Management
-    - Security and Compliancy
-    - Deployment Tools
-    - Monitoring Tools
+[Table Of Contents](./Content/TableOfContents.md)
 
 ## Objectives
 
@@ -61,3 +29,5 @@ Throughout the course, I will provide exam tips highlighting common exam questio
 Throughout this training, I used visual aids created myself, but wherever possible, I also employed images and graphics from the Microsoft official documentation at https://learn.microsoft.com.
 
 Last but not least, the format is not only inspired but copied from [David Beazley's Practical Python](https://dabeaz-course.github.io/practical-python/) traning. A while ago, I had the pleasure of joining a Python training based on David's content, and I fell in love with the format. 
+
+[Next >](./Content/TableOfContents.md)   
