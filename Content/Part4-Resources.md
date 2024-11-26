@@ -84,6 +84,10 @@ IP address allocation, switching, routing, DNS, and a default Internet breakout 
 
 The Virtual Network is a free resource which does not have a monthly cost associated with it, but data egressing from your Azure VNET will be billed. Ingress is free.
 
+### Service Endpoints
+
+TO-DO - Add a secion explaining public PaaS resources and Service (and Private) Endpoints
+
 ### VPN
 
 A private network in Azure will be instrumental. However, we can upgrade our environment even further by connecting our cloud VNET to the local on-premises network hosting other applications. The most common, battle-tested way of connecting to separate local networks is through an IPSEC VPN tunnel. 
